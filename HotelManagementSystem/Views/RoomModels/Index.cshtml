@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HotelManagementSystem.Models.RoomModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="roomControll">
+        <h1>Room Models Controll</h1>
+    </div>
+    <br /><br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImage)
+            </td>
+            <td>
+
+                        <button type="button" class="btn btn-outline-dark"><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></button>
+                        <button type="button" class="btn btn-outline-warning"><a asp-action="Details" asp-route-id="@item.Id">Details</a></button>
+                        <button type="button" class="btn btn-outline-danger"><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    <br />
+    <button type="button" class="btn btn-light"><a asp-action="Create">Create New Room Model</a></button>
+
+</div>

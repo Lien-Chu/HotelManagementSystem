@@ -1,0 +1,31 @@
+﻿@model HotelManagementSystem.Models.RoomStatusModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="color:orange">Details</h1>
+
+<div>
+    <h4>Room Status Detail</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomStatusId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoomStatusId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomStatusName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoomStatusName)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <br />
+    <button type="button" class="btn btn-light"><a asp-action="Index">Back to List</a></button>
+</div>

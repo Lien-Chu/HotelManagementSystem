@@ -15,7 +15,8 @@ namespace HotelManagementSystem.Models
 				return $"{FirstName} {LastName}";
 			}
 		}
-		public string PhoneNumber { get; set; }
+		// add overwrite
+		public override string PhoneNumber { get; set; }
 		public string PostalCode { get; set; }
 		public string StreetAddress { get; set; }
 		public string City { get; set; }

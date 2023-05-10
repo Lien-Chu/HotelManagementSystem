@@ -14,5 +14,6 @@ namespace HotelManagementSystem.Data
 		public DbSet<RoomModel> Rooms { get; set; }
 		public DbSet<BookingModel> Bookings { get; set; }
 		public DbSet<CustomerModel> Customers { get; set; }
+		public DbSet<HotelManagementSystem.Models.RoomStatusModel> RoomStatusModel { get; set; } = default!;
 	}
 }

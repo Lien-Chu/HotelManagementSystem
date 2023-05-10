@@ -9,11 +9,12 @@ namespace HotelManagementSystem.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [Display(Name = "Room Status Id")]
         public int RoomStatusId { get; set; }
 
         [Required]
+        [Display(Name = "Room Status Name")]
         public string RoomStatusName { get; set; }
-
 
     }
 }

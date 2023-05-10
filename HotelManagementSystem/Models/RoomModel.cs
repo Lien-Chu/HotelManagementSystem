@@ -9,14 +9,18 @@ namespace HotelManagementSystem.Models
 		[Key]
 		public int Id { get; set; }
 		[Required]
-		public int RoomNumber { get; set; }
+        [Display(Name = "Room Number")]
+        public int RoomNumber { get; set; }
 		[Required]
-		public string RoomType { get; set; }
+        [Display(Name = "Room Type")]
+        public string RoomType { get; set; }
 		[Required]
-		public decimal RoomPrice { get; set; }
-
-		public string? RoomDescription { get; set; }
-		public string? RoomImage { get; set; }
+        [Display(Name = "Room Price")]
+        public decimal RoomPrice { get; set; }
+        [Display(Name = "Room Description")]
+        public string? RoomDescription { get; set; }
+        [Display(Name = "Room Image")]
+        public string? RoomImage { get; set; }
 		public RoomStatusModel RoomStatus { get; set; }
 
     }
